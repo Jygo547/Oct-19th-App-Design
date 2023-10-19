@@ -9,14 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = "Stay Local"
-    @State private var isLiked: Bool = UserDefaults.standard.bool(forKey: "isLiked")
+    @State private var isLiked1: Bool = UserDefaults.standard.bool(forKey: "isLiked1")
+    @State private var isLiked2: Bool = UserDefaults.standard.bool(forKey: "isLiked2")
+    @State private var isLiked3: Bool = UserDefaults.standard.bool(forKey: "isLiked3")
     @State private var cardExpanded1 = false
     @State private var cardExpanded2 = false
     @State private var cardExpanded3 = false
     
-    func toggleLike() {
-        isLiked.toggle()
-        UserDefaults.standard.set(isLiked, forKey: "isLiked")
+    func toggleLike1() {
+        
+        isLiked1.toggle()
+        UserDefaults.standard.set(isLiked1, forKey: "isLiked1")
+
+    }
+    
+    func toggleLike2() {
+        
+        isLiked2.toggle()
+        UserDefaults.standard.set(isLiked2, forKey: "isLiked2")
+        
+    }
+    
+    func toggleLike3() {
+        
+        isLiked3.toggle()
+        UserDefaults.standard.set(isLiked3, forKey: "isLiked3")
+        
     }
     
     private var tabWidth: CGFloat = 100
@@ -123,11 +141,11 @@ struct ContentView: View {
                                         
                                     Spacer()
                                     
-                                    Button(action: toggleLike) {
-                                        Image(systemName: isLiked ? "heart.fill" : "heart")
+                                    Button(action: toggleLike1) {
+                                        Image(systemName: isLiked1 ? "heart.fill" : "heart")
                                             .resizable()
                                             .frame(width: 30, height: 25)
-                                            .foregroundColor(isLiked ? .red : .primary)
+                                            .foregroundColor(isLiked1 ? .red : .primary)
                                             
                                     }
                                     .padding(.trailing, 5)
@@ -222,11 +240,11 @@ struct ContentView: View {
                                         
                                     Spacer()
                                     
-                                    Button(action: toggleLike) {
-                                        Image(systemName: isLiked ? "heart.fill" : "heart")
+                                    Button(action: toggleLike2) {
+                                        Image(systemName: isLiked2 ? "heart.fill" : "heart")
                                             .resizable()
                                             .frame(width: 30, height: 25)
-                                            .foregroundColor(isLiked ? .red : .primary)
+                                            .foregroundColor(isLiked2 ? .red : .primary)
                                             
                                     }
                                     .padding(.trailing, 5)
@@ -323,11 +341,11 @@ struct ContentView: View {
                                         
                                     Spacer()
                                     
-                                    Button(action: toggleLike) {
-                                        Image(systemName: isLiked ? "heart.fill" : "heart")
+                                    Button(action: toggleLike3) {
+                                        Image(systemName: isLiked3 ? "heart.fill" : "heart")
                                             .resizable()
                                             .frame(width: 30, height: 25)
-                                            .foregroundColor(isLiked ? .red : .primary)
+                                            .foregroundColor(isLiked3 ? .red : .primary)
                                             
                                     }
                                     .padding(.trailing, 5)
